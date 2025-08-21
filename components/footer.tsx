@@ -6,14 +6,14 @@ export function Footer() {
           {/* Brand */}
           <div>
             <div className="flex flex-col mb-6">
-              <h3 className="font-serif text-xl font-semibold text-white leading-none">New Nanda</h3>
-              <p className="text-xs uppercase tracking-[1.5px] text-white/60 leading-none mt-0.5">
-                Special Custom Made
-              </p>
+              <img 
+                src="/images/logo-New-Nanda-white.png" 
+                alt="New Nanda Logo" 
+                className="h-16 w-auto object-contain mb-4 self-start"
+              />
             </div>
             <p className="text-white/80 text-sm leading-relaxed">
-              Crafting custom packaging, menu covers, stationery, and presentation pieces with premium materials and
-              modern finishes.
+            Custom packaging, menu book, stationery, presentation cases, and more. Bring your ideas into reality.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-white/60 text-sm">© 2025 New Nanda. Bring your ideas into reality.</p>
+          <p className="text-white/60 text-sm">© 2025 New Nanda</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">
               Privacy

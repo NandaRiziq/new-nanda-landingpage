@@ -47,7 +47,7 @@ export function CraftMaterialsSection() {
           <div className="order-first lg:order-last">
             <div className="aspect-[4/3] overflow-hidden rounded-lg">
               <img
-                src="/placeholder.svg?height=600&width=800"
+                src="/images/cardimage/cardimage-5.jpg"
                 alt="Material board showing linen, leatherette, and wood veneer swatches with foil and hardware samples"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
               />

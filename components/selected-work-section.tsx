@@ -6,25 +6,25 @@ export function SelectedWorkSection() {
       title: "Minimal Rigid Gift Box",
       description: "Matte board, ribbon pull, hot-stamped logo.",
       materials: "Rigid board, satin ribbon, gold foil",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/cardimage/cardimage-1.png",
     },
     {
       title: "Screw-Post Menu Cover",
       description: "Linen cloth, replaceable inserts for daily service.",
       materials: "Linen, gold foil, screw-post",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/cardimage/cardimage-2.png",
     },
     {
       title: "Presentation Folder Set",
       description: "Textured stock, debossed mark, edge gilding.",
       materials: "Textured paper, deboss, metallic edge",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/cardimage/cardimage-3.png",
     },
     {
       title: "USB Case & Card",
       description: "Velvet tray, magnetic closure, foil monogram.",
       materials: "Velvet insert, magnet lock, foil",
-      image: "/placeholder.svg?height=400&width=600",
+      image: "/images/cardimage/cardimage-4.png",
     },
   ]
 
@@ -44,7 +44,7 @@ export function SelectedWorkSection() {
               key={index}
               className="group overflow-hidden border-0 shadow-none hover:shadow-lg transition-all duration-300 p-0 bg-transparent rounded-none"
             >
-              <div className="aspect-[3/2] overflow-hidden">
+              <div className="aspect-square overflow-hidden">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={`${project.title} - ${project.description}`}

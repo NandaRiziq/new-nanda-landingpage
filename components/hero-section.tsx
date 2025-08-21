@@ -11,7 +11,7 @@ export function HeroSection() {
     >
       {/* Left Background Image */}
       <div
-        className="absolute left-0 top-0 w-1/3 h-full bg-cover bg-center bg-no-repeat"
+        className="absolute left-0 top-0 w-1/3 h-full bg-cover bg-center bg-no-repeat hidden md:block"
         style={{
           backgroundImage: `url('/images/hero-section-left.png?height=1080&width=640')`,
         }}
@@ -19,14 +19,14 @@ export function HeroSection() {
 
       {/* Right Background Image */}
       <div
-        className="absolute right-0 top-0 w-1/3 h-full bg-cover bg-center bg-no-repeat"
+        className="absolute right-0 top-0 w-1/3 h-full bg-cover bg-center bg-no-repeat hidden md:block"
         style={{
           backgroundImage: `url('/images/hero-section-right.png?height=1080&width=640')`,
         }}
       />
 
       {/* White Center Area */}
-      <div className="absolute left-1/3 right-1/3 top-0 h-full bg-white" />
+      <div className="absolute left-1/3 right-1/3 top-0 h-full bg-white hidden md:block" />
 
       {/* Content */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
@@ -34,7 +34,7 @@ export function HeroSection() {
           <img 
             src="/images/logo-New-Nanda-gold.png" 
             alt="New Nanda Logo" 
-            className="h-24 w-auto"
+            className="h-20 w-auto"
           />
         </div>
 
@@ -45,13 +45,12 @@ export function HeroSection() {
         </h1>
 
         <div className="max-w-xl mx-auto mb-8">
-          <p className="text-lg md:text-xl leading-relaxed text-primary mb-4">
-            We design and manufacture custom pieces—packaging, menu covers, stationery, bill folders, presentation
-            cases, and more.
+          <p className="text-lg md:text-xl leading-relaxed text-muted-foreground mb-4">
+            We design and manufacture custom packaging, menu book, stationery, presentation cases, and more.
           </p>
         </div>
 
-        <p className="text-sm mb-12 italic text-black">"Bring your ideas into reality."</p>
+        <p className="text-sm mb-12 italic text-black">Bring your ideas into reality.</p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Button
