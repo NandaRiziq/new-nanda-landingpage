@@ -13,7 +13,7 @@ export function HeroSection() {
       <div
         className="absolute left-0 top-0 w-1/3 h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/placeholder.svg?height=1080&width=640')`,
+          backgroundImage: `url('/images/hero-section-left.png?height=1080&width=640')`,
         }}
       />
 
@@ -21,7 +21,7 @@ export function HeroSection() {
       <div
         className="absolute right-0 top-0 w-1/3 h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/placeholder.svg?height=1080&width=640')`,
+          backgroundImage: `url('/images/hero-section-right.png?height=1080&width=640')`,
         }}
       />
 
@@ -30,7 +30,13 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
-        <p className="text-sm uppercase tracking-[1.5px] text-primary mb-6">Special Custom Made</p>
+        <div className="mb-12 flex justify-center">
+          <img 
+            src="/images/logo-New-Nanda-gold.png" 
+            alt="New Nanda Logo" 
+            className="h-24 w-auto"
+          />
+        </div>
 
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal leading-[1.08] tracking-[0.5px] mb-8 text-black">
           Crafted to order,
@@ -38,13 +44,10 @@ export function HeroSection() {
           built to last
         </h1>
 
-        <div className="max-w-2xl mx-auto mb-8">
+        <div className="max-w-xl mx-auto mb-8">
           <p className="text-lg md:text-xl leading-relaxed text-primary mb-4">
             We design and manufacture custom pieces—packaging, menu covers, stationery, bill folders, presentation
             cases, and more.
-          </p>
-          <p className="text-lg md:text-xl leading-relaxed text-primary">
-            Materials first. Details obsessed. Built for real use.
           </p>
         </div>
 

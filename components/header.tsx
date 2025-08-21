@@ -23,16 +23,17 @@ export function Header() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 h-[72px] transition-all duration-300 ${
-          isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
+          isScrolled ? "bg-background/95 backdrop-blur-sm shadow-sm opacity-100 translate-y-0" : "bg-transparent opacity-0 -translate-y-full"
         }`}
       >
         <div className="max-w-[1200px] mx-auto px-6 h-full flex items-center justify-between">
           {/* Brand Lockup */}
-          <div className="flex flex-col">
-            <h1 className="font-serif text-xl font-semibold text-foreground leading-none">New Nanda</h1>
-            <p className="text-xs uppercase tracking-[1.5px] text-muted-foreground leading-none mt-0.5">
-              Special Custom Made
-            </p>
+          <div className="flex items-center">
+            <img 
+              src="/images/logo-New-Nanda-gold.png" 
+              alt="New Nanda Logo" 
+              className="h-10 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
