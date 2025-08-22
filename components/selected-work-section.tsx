@@ -58,18 +58,18 @@ export function SelectedWorkSection() {
             return (
               <Card
                 key={index}
-                className="group overflow-hidden border-0 shadow-none hover:shadow-lg transition-all duration-300 p-0 bg-transparent rounded-none"
+                className="group overflow-hidden border-0 shadow-none hover:shadow-lg transition-all duration-300 p-0 bg-transparent rounded-lg"
               >
-                <div className="aspect-square overflow-hidden">
+                <div className="aspect-square overflow-hidden rounded-lg">
                   <img
                     src={project.image || "/placeholder.svg"}
                     alt={`${project.title} - ${project.description}`}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
-                <div className="p-2">
-                  <h3 className="font-serif text-xl font-medium mb-1 text-primary-foreground">{project.title}</h3>
-                  <p className={`text-sm text-muted-foreground/80 ${isLastRow ? 'mb-2' : 'mb-10'}`}>{project.description}</p>
+                <div className="p-4 pb-6">
+                  <h3 className="font-serif text-xl font-medium mb-2 text-primary-foreground">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground/80">{project.description}</p>
                 </div>
               </Card>
             );
