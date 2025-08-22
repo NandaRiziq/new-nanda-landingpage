@@ -52,7 +52,7 @@ export function SelectedWorkSection() {
     <section id="work" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
-          <div ref={ref}>
+          <div ref={ref} className="h-[60px]">
             <TextEffect 
               preset="fade-in-blur" 
               speedReveal={1.1} 
