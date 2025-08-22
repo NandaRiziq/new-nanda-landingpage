@@ -3,28 +3,40 @@ import { Card } from "@/components/ui/card"
 export function SelectedWorkSection() {
   const projects = [
     {
-      title: "Minimal Rigid Gift Box",
-      description: "Matte board, ribbon pull, hot-stamped logo.",
+      title: "Restaurant Menu Book",
+      description: "Textured leather, gold-foil logo, hard cover structure",
       materials: "Rigid board, satin ribbon, gold foil",
       image: "/images/cardimage/cardimage-1.png",
     },
     {
-      title: "Screw-Post Menu Cover",
-      description: "Linen cloth, replaceable inserts for daily service.",
+      title: "Exclusive Invitation",
+      description: "Printed art paper, satin ribbon tie, colored-foil",
       materials: "Linen, gold foil, screw-post",
       image: "/images/cardimage/cardimage-2.png",
     },
     {
-      title: "Presentation Folder Set",
-      description: "Textured stock, debossed mark, edge gilding.",
+      title: "Product Sample Box",
+      description: "Grey board, Linmaster cover, foiled logo, ivory sleeve",
       materials: "Textured paper, deboss, metallic edge",
       image: "/images/cardimage/cardimage-3.png",
     },
     {
-      title: "USB Case & Card",
-      description: "Velvet tray, magnetic closure, foil monogram.",
+      title: "Custom Briefcase",
+      description: "Floral paper, suede accent, stitched carry handle",
       materials: "Velvet insert, magnet lock, foil",
       image: "/images/cardimage/cardimage-4.png",
+    },
+    {
+      title: "Photo Album",
+      description: "Assorted photo albums with various covers and designs",
+      materials: "Genuine leather, magnetic latch, foam cushioning",
+      image: "/images/cardimage/cardimage-6.png",
+    },
+    {
+      title: "Custom Packaging",
+      description: "Rigid gift box, magnetic lid, custom tray",
+      materials: "Recycled paper, elastic band, custom printing",
+      image: "/images/cardimage/cardimage-7.png",
     },
   ]
 
@@ -38,26 +50,30 @@ export function SelectedWorkSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-          {projects.map((project, index) => (
-            <Card
-              key={index}
-              className="group overflow-hidden border-0 shadow-none hover:shadow-lg transition-all duration-300 p-0 bg-transparent rounded-none"
-            >
-              <div className="aspect-square overflow-hidden">
-                <img
-                  src={project.image || "/placeholder.svg"}
-                  alt={`${project.title} - ${project.description}`}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-6">
-                <h3 className="font-serif text-xl font-medium mb-2 text-primary-foreground">{project.title}</h3>
-                <p className="text-primary-foreground/80 mb-3 leading-relaxed">{project.description}</p>
-                <p className="text-sm text-primary-foreground/60 mb-4 italic">{project.materials}</p>
-              </div>
-            </Card>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {projects.map((project, index) => {
+            // Check if this card is in the last row (for 3-column grid)
+            const isLastRow = index >= projects.length - (projects.length % 3 || 3);
+            
+            return (
+              <Card
+                key={index}
+                className="group overflow-hidden border-0 shadow-none hover:shadow-lg transition-all duration-300 p-0 bg-transparent rounded-none"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img
+                    src={project.image || "/placeholder.svg"}
+                    alt={`${project.title} - ${project.description}`}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="p-2">
+                  <h3 className="font-serif text-xl font-medium mb-1 text-primary-foreground">{project.title}</h3>
+                  <p className={`text-sm text-muted-foreground/80 ${isLastRow ? 'mb-2' : 'mb-10'}`}>{project.description}</p>
+                </div>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
