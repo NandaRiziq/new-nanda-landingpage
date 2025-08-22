@@ -1,6 +1,14 @@
+"use client"
+
 import { Card } from "@/components/ui/card"
+import { TextEffect } from "@/components/motion-primitives/text-effect"
+import { useInView } from "motion/react"
+import { useRef } from "react"
 
 export function SelectedWorkSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.3, once: true })
+
   const projects = [
     {
       title: "Restaurant Menu Book",
@@ -44,7 +52,17 @@ export function SelectedWorkSection() {
     <section id="work" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-foreground">What We Make</h2>
+          <div ref={ref}>
+            <TextEffect 
+              preset="fade-in-blur" 
+              speedReveal={1.1} 
+              speedSegment={0.3}
+              trigger={isInView}
+              className="font-serif text-4xl md:text-5xl font-normal mb-6 text-foreground"
+            >
+              What We Make
+            </TextEffect>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             A few recent pieces—each designed around a specific brand, material, and moment.
           </p>

@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${newsreader.variable} ${inter.variable} antialiased`}>
+    <html lang="en" className={`${newsreader.variable} ${inter.variable} antialiased`} suppressHydrationWarning>
       <body>{children}</body>
     </html>
   )

@@ -1,9 +1,27 @@
+"use client"
+
+import { TextEffect } from "@/components/motion-primitives/text-effect"
+import { useInView } from "motion/react"
+import { useRef } from "react"
+
 export function ClientsSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.3, once: true })
   return (
     <section id="clients" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-10">
-          <h2 className="font-serif text-2xl font-normal mb-18 text-foreground md:text-5xl">Our Clients</h2>
+          <div ref={ref}>
+            <TextEffect
+              preset="fade-in-blur"
+              speedReveal={1.1}
+              speedSegment={0.3}
+              trigger={isInView}
+              className="font-serif text-2xl font-normal mb-18 text-foreground md:text-5xl"
+            >
+              Our Clients
+            </TextEffect>
+          </div>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {/* Client logos - you can replace these with actual client logos */}
             <div className="w-25 h-25 flex items-center justify-center opacity-70 hover:opacity-100 transition-all duration-300 group">
@@ -52,7 +70,7 @@ export function ClientsSection() {
         </div>
 
         <div className="text-center">
-          <h3 className="text-primary text-xl">And many more...</h3>
+          <h3 className="text-primary text-sm">And many more...</h3>
         </div>
       </div>
     </section>

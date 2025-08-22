@@ -1,13 +1,30 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
+import { TextEffect } from "@/components/motion-primitives/text-effect"
+import { useInView } from "motion/react"
+import { useRef } from "react"
 
 export function CraftMaterialsSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.3, once: true })
   return (
     <section id="craft-materials" className="py-24 md:py-32 bg-background">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
           <div>
-            <h2 className="font-serif text-4xl md:text-5xl font-normal mb-8 text-foreground">Craft & Materials</h2>
+            <div ref={ref}>
+              <TextEffect
+                preset="fade-in-blur"
+                speedReveal={1.1}
+                speedSegment={0.3}
+                trigger={isInView}
+                className="font-serif text-4xl md:text-5xl font-normal mb-8 text-foreground"
+              >
+                Craft & Materials
+              </TextEffect>
+            </div>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
               Material choice defines the feeling; finishing locks in durability. We source premium stocks and hardware,
               then finish by hand.

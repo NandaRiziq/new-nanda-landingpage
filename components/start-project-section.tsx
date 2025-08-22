@@ -4,8 +4,13 @@ import type React from "react"
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { TextEffect } from "@/components/motion-primitives/text-effect"
+import { useInView } from "motion/react"
+import { useRef } from "react"
 
 export function StartProjectSection() {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { amount: 0.3, once: true })
   const [formData, setFormData] = useState({
     name: "",
     company: "",
@@ -72,9 +77,17 @@ export function StartProjectSection() {
     <section id="start-project" className="py-24 md:py-32 bg-muted/20">
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl font-normal mb-6 text-foreground">
-            Ready to make something custom?
-          </h2>
+          <div ref={ref}>
+            <TextEffect
+              preset="fade-in-blur"
+              speedReveal={1.1}
+              speedSegment={0.3}
+              trigger={isInView}
+              className="font-serif text-4xl md:text-5xl font-normal mb-6 text-foreground"
+            >
+              Ready to make something custom?
+            </TextEffect>
+          </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Share a sketch or idea—receive materials, timeline, and a prototype plan.
           </p>
