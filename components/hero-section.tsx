@@ -1,10 +1,11 @@
 import { Button } from "@/components/ui/button"
 import { AnimatedGroup } from "@/components/motion-primitives/animated-group"
 import { TextEffect } from "@/components/motion-primitives/text-effect"
+import { ChevronDown } from "@/components/animate-ui/icons/chevron-down"
 
 export function HeroSection() {
   const whatsappLink =
-    "https://wa.me/62812XXXXXXXX?text=Hello%20New%20Nanda%2C%20I%27d%20like%20to%20start%20a%20custom%20order."
+    "https://wa.me/6281392270440"
 
   return (
     <section
@@ -95,7 +96,7 @@ export function HeroSection() {
       <div className="absolute left-1/3 right-1/3 top-0 h-full bg-white hidden md:block z-[-1]" />
 
       {/* Content */}
-      <div className="relative z-20 max-w-[1200px] w-full mx-auto px-6 text-center pt-8 pb-10">
+      <div className="relative z-20 max-w-[1200px] w-full mx-auto px-6 text-center pt-6 pb-10">
         {/* Mobile layout */}
         <div className="md:hidden">
           {/* Logo on top */}
@@ -216,7 +217,7 @@ export function HeroSection() {
           </div>
 
           {/* Text content under images */}
-          <div className="font-serif text-4xl font-normal leading-tight tracking-[0.5px] mb-6 text-black max-w-[35ch] mx-auto">
+          <div className="font-serif text-4xl font-normal leading-tight tracking-[0.5px] mb-6 text-black max-w-[35ch] mx-auto -translate-y-6">
             <TextEffect 
               per="char"
               preset="fade-in-blur"
@@ -240,7 +241,7 @@ export function HeroSection() {
               built to last
             </TextEffect>
           </div>
-          <div className="max-w-[35ch] mx-auto mb-6">
+          <div className="max-w-[35ch] mx-auto mb-6 -translate-y-6">
             <TextEffect
               per="char"
               preset="fade"
@@ -256,7 +257,7 @@ export function HeroSection() {
             per="char"
             preset="fade"
             as="p"
-            className="text-xs italic text-black"
+            className="text-xs italic text-black -translate-y-6"
             delay={3.2}
           >
             Bring your ideas into reality.
@@ -408,6 +409,31 @@ export function HeroSection() {
             </div>
           </div>
         </div>
+      </div>
+      {/* Mobile chevron down indicator */}
+      <div className="md:hidden absolute bottom-10 left-1/2 -translate-x-1/2 z-30">
+        <AnimatedGroup
+          variants={{
+            container: {
+              visible: {
+                transition: {
+                  staggerChildren: 0.05,
+                },
+              },
+            },
+            item: {
+              hidden: { opacity: 0, y: 6 },
+              visible: {
+                opacity: 1,
+                y: 0,
+                transition: { duration: 0.4, delay: 3.5 },
+              },
+            },
+          }}
+          once
+        >
+          <ChevronDown animate animation="default-loop" loop loopDelay={0.5} size={28} className="text-black/60" />
+        </AnimatedGroup>
       </div>
     </section>
   )

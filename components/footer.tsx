@@ -41,9 +41,8 @@ export function Footer() {
           <div>
             <h4 className="font-medium text-white mb-4 text-sm uppercase tracking-[1.5px]">Contact</h4>
             <div className="space-y-2">
-              <p className="text-white/80 text-sm">WhatsApp: +62 812 XXXX XXXX</p>
               <a
-                href="https://wa.me/62812XXXXXXXX?text=Hello%20New%20Nanda%2C%20I%27d%20like%20to%20start%20a%20custom%20order."
+                href="https://wa.me/6281392270440"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block text-primary hover:text-primary/80 transition-colors text-sm underline decoration-1 underline-offset-4"

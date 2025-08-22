@@ -17,7 +17,7 @@ export function Header() {
   }, [])
 
   const whatsappLink =
-    "https://wa.me/62812XXXXXXXX?text=Hello%20New%20Nanda%2C%20I%27d%20like%20to%20start%20a%20custom%20order."
+    "https://wa.me/6281392270440"
 
   return (
     <>
