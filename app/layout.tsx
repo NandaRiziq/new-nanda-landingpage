@@ -21,6 +21,21 @@ export const metadata: Metadata = {
   description:
     "New Nanda crafts custom packaging, menu covers, stationery, and presentation pieces with premium materials and modern finishes. Small batches welcome. Indonesia-wide delivery.",
   generator: "v0.app",
+  openGraph: {
+    type: "website",
+    url: "https://newnanda.com/",
+    title: "New Nanda — Special Custom Made | Packaging, Menu Covers & Stationery",
+    description:
+      "New Nanda crafts custom packaging, menu covers, stationery, and presentation pieces with premium materials and modern finishes. Small batches welcome. Indonesia-wide delivery.",
+    images: [
+      {
+        url: "https://newnanda.com/opengraph-image.png",
+        width: 1200,
+        height: 630,
+        alt: "New Nanda - Special Custom Made",
+      },
+    ],
+  },
 }
 
 export default function RootLayout({
