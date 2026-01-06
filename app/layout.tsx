@@ -34,6 +34,12 @@ export const metadata: Metadata = {
         height: 630,
         alt: "New Nanda - Special Custom Made",
       },
+      {
+        url: "https://newnanda.com/opengraph-image-square.png",
+        width: 1200,
+        height: 1200,
+        alt: "New Nanda - Special Custom Made",
+      },
     ],
   },
 }
